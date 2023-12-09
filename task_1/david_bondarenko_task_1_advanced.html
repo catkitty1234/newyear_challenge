@@ -1,0 +1,30 @@
+<!-- Бондаренко Давид -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Task 1 advanced</title>
+</head>
+<body>
+	<script language="javascript">
+		let data = prompt("Напишите свое ФИО и год рождения: ").split(" ");
+		name = `${data[0]} ${data[1][0]}.${data[2][0]}.`;
+		age = (2023 - parseInt(data[3]));
+
+		if (age == 0) {
+			alert("Вы ёще совсем малыш, который родился в этом году.");
+		}
+		else if ( ((age % 10) >= 5) || ((age % 10) == 0) || ((age >= 5) && (age <= 20)) ){
+			alert(`${name} ${age} лет`);
+		}
+		else if ((age%10) == 1) {
+			alert(`${name} ${age} год`);
+		}
+		else {
+			alert(`${name} ${age} года`);
+		}
+
+	</script>
+</body>
+</html>
